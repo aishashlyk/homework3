@@ -106,6 +106,15 @@ public class TicketService {
         tickets.add(new Ticket("T010", "Concert Hall J", 110, true, 'J', 1.9, 140.0));
     }
 
+    public Ticket getTicketById(String id) {
+        for (Ticket ticket : tickets) {
+            if (ticket.getId().equals(id)) {
+                return ticket;
+            }
+        }
+        return null;
+    }
+
     public static void main(String[] args) {
         TicketService ticketService = new TicketService();
 
